@@ -1,6 +1,7 @@
+// creating a object that contains an array 
 let projects = [
     {
-      imgURL: "https://picsum.photos/300?random=1",
+      imgURL: "/images/bones.jpeg",
       title: "Mr Bones",
       genre: "Comedy",
       description: "A funny white african man",
@@ -45,7 +46,7 @@ let projects = [
   
   function createCard(card) {
     let createdCard = `<div class="project-card" genre=${card.genre} >
-        <img src="${card.imgURL}">
+        <img class="movie-pic" src="${card.imgURL}">
         <h4>${card.title}</h4>
         <h6>${card.genre}</h6>
         <p>${card.description}</p>
@@ -65,6 +66,7 @@ let projects = [
   
   renderCards();
   
+  // filter
   function filterCards(category) {
     let cards = document.getElementsByClassName("project-card");
   
