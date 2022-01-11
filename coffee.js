@@ -99,7 +99,7 @@ let projects = [
       // Filter all the countries in the array with value typed into the input field
       let moviesFound = projects.filter(project => project.title.toLowerCase().includes(searchedMovie.toLowerCase()));
       if(moviesFound.length === 0) {
-        throw new Error('No countries were found');
+        throw new Error('No movies were found');
       }
       project = moviesFound;
     renderCards();
