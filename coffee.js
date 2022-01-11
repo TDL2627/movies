@@ -89,3 +89,21 @@ let projects = [
     }
   }
  
+  // search
+  searchbar = () => {
+    var searchedMovie = document.getElementById('search').value.trim();
+    try {
+      if (!searchedMovie) {
+        throw new Error('Nothing was entered in the search bar');
+      }
+      // Filter all the countries in the array with value typed into the input field
+      let moviesFound = projects.filter(project => project.title.toLowerCase().includes(searchedMovie.toLowerCase()));
+      if(moviesFound.length === 0) {
+        throw new Error('No countries were found');
+      }
+      project = moviesFound;
+    renderCards();
+    } catch (err) {
+      alert(err.message);
+    }
+  };
